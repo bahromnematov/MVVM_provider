@@ -1,4 +1,5 @@
-import 'package:bloc_example/2-lesson/data/models/product_model/rating_model.dart';
+
+import 'package:bloc_example/data/models/product_model/rating_model.dart';
 
 class ProductModel {
   int id;

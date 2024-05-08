@@ -1,7 +1,12 @@
-import 'package:bloc_example/2-lesson/service/api_service/api_service.dart';
 import 'package:flutter/cupertino.dart';
 
+import '../service/api_service/api_service.dart';
+
 class ProductsViewModel extends ChangeNotifier {
+  ProductsViewModel() {
+    getAllProducts();
+  }
+
   List products = [];
   bool isLoading = false;
 

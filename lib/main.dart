@@ -1,10 +1,8 @@
-import 'package:bloc_example/2-lesson/view_model/products_view_model.dart';
-import 'package:bloc_example/provider/counter_view_model.dart';
-import 'package:bloc_example/provider/provider_counter.dart';
+import 'package:bloc_example/ui/products/products_page.dart';
+import 'package:bloc_example/view_model/product_view_model.dart';
+import 'package:bloc_example/view_model/products_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
-import '2-lesson/ui/products/products_page.dart';
 
 void main() {
   runApp(
@@ -12,8 +10,8 @@ void main() {
     /// can use [MyApp] while mocking the providers
     MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (context) => CounterViewModel()),
         ChangeNotifierProvider(create: (context) => ProductsViewModel()),
+        ChangeNotifierProvider(create: (context) => ProductViewModel()),
       ],
       child: const MyApp(),
     ),
